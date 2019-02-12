@@ -13,6 +13,8 @@
 		CED61C4B2212555500415F56 /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C4A2212555500415F56 /* TripModel.swift */; };
 		CED61C4D2212556600415F56 /* TripFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C4C2212556600415F56 /* TripFunctions.swift */; };
 		CED61C4F2212577B00415F56 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C4E2212577B00415F56 /* Data.swift */; };
+		CED61C5322125CD000415F56 /* TripsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C5222125CD000415F56 /* TripsVC.swift */; };
+		CED61C5522125CE400415F56 /* TripsVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED61C5422125CE400415F56 /* TripsVC.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		CED61C4A2212555500415F56 /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
 		CED61C4C2212556600415F56 /* TripFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFunctions.swift; sourceTree = "<group>"; };
 		CED61C4E2212577B00415F56 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		CED61C5222125CD000415F56 /* TripsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsVC.swift; sourceTree = "<group>"; };
+		CED61C5422125CE400415F56 /* TripsVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsVC.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				CED61C482212551E00415F56 /* Model */,
+				CED61C5022125C7700415F56 /* Views */,
 				CEAAAD7820634B4700AD6A44 /* AppDelegate.swift */,
 				CEAAAD7F20634B4700AD6A44 /* Assets.xcassets */,
 				CEAAAD8120634B4700AD6A44 /* LaunchScreen.storyboard */,
@@ -81,6 +86,23 @@
 				CED61C4C2212556600415F56 /* TripFunctions.swift */,
 			);
 			path = Trip;
+			sourceTree = "<group>";
+		};
+		CED61C5022125C7700415F56 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CED61C5122125C8600415F56 /* TripsViewController */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CED61C5122125C8600415F56 /* TripsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CED61C5222125CD000415F56 /* TripsVC.swift */,
+				CED61C5422125CE400415F56 /* TripsVC.storyboard */,
+			);
+			path = TripsViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,11 +132,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Gerardo Mascayano";
 				TargetAttributes = {
 					CEAAAD7420634B4700AD6A44 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -142,6 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED61C5522125CE400415F56 /* TripsVC.storyboard in Resources */,
 				CEAAAD8320634B4700AD6A44 /* LaunchScreen.storyboard in Resources */,
 				CEAAAD8020634B4700AD6A44 /* Assets.xcassets in Resources */,
 			);
@@ -154,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED61C5322125CD000415F56 /* TripsVC.swift in Sources */,
 				CED61C4B2212555500415F56 /* TripModel.swift in Sources */,
 				CEAAAD7920634B4700AD6A44 /* AppDelegate.swift in Sources */,
 				CED61C4D2212556600415F56 /* TripFunctions.swift in Sources */,
@@ -189,6 +214,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -196,6 +222,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -246,6 +273,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -253,6 +281,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -292,7 +321,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cl.gerardomascayano.Itinerary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -307,7 +336,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cl.gerardomascayano.Itinerary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
