@@ -10,6 +10,8 @@
 		CEAAAD7920634B4700AD6A44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAAD7820634B4700AD6A44 /* AppDelegate.swift */; };
 		CEAAAD8020634B4700AD6A44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAAAD7F20634B4700AD6A44 /* Assets.xcassets */; };
 		CEAAAD8320634B4700AD6A44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAAAD8120634B4700AD6A44 /* LaunchScreen.storyboard */; };
+		CED61C4B2212555500415F56 /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C4A2212555500415F56 /* TripModel.swift */; };
+		CED61C4D2212556600415F56 /* TripFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C4C2212556600415F56 /* TripFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +20,8 @@
 		CEAAAD7F20634B4700AD6A44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEAAAD8220634B4700AD6A44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEAAAD8420634B4700AD6A44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CED61C4A2212555500415F56 /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
+		CED61C4C2212556600415F56 /* TripFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,12 +54,30 @@
 		CEAAAD7720634B4700AD6A44 /* Itinerary */ = {
 			isa = PBXGroup;
 			children = (
+				CED61C482212551E00415F56 /* Model */,
 				CEAAAD7820634B4700AD6A44 /* AppDelegate.swift */,
 				CEAAAD7F20634B4700AD6A44 /* Assets.xcassets */,
 				CEAAAD8120634B4700AD6A44 /* LaunchScreen.storyboard */,
 				CEAAAD8420634B4700AD6A44 /* Info.plist */,
 			);
 			path = Itinerary;
+			sourceTree = "<group>";
+		};
+		CED61C482212551E00415F56 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CED61C492212552C00415F56 /* Trip */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CED61C492212552C00415F56 /* Trip */ = {
+			isa = PBXGroup;
+			children = (
+				CED61C4A2212555500415F56 /* TripModel.swift */,
+				CED61C4C2212556600415F56 /* TripFunctions.swift */,
+			);
+			path = Trip;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,7 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED61C4B2212555500415F56 /* TripModel.swift in Sources */,
 				CEAAAD7920634B4700AD6A44 /* AppDelegate.swift in Sources */,
+				CED61C4D2212556600415F56 /* TripFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
