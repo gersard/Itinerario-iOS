@@ -12,6 +12,7 @@
 		CEAAAD8320634B4700AD6A44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAAAD8120634B4700AD6A44 /* LaunchScreen.storyboard */; };
 		CED61C4B2212555500415F56 /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C4A2212555500415F56 /* TripModel.swift */; };
 		CED61C4D2212556600415F56 /* TripFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C4C2212556600415F56 /* TripFunctions.swift */; };
+		CED61C4F2212577B00415F56 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C4E2212577B00415F56 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		CEAAAD8420634B4700AD6A44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CED61C4A2212555500415F56 /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
 		CED61C4C2212556600415F56 /* TripFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFunctions.swift; sourceTree = "<group>"; };
+		CED61C4E2212577B00415F56 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		CED61C482212551E00415F56 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CED61C4E2212577B00415F56 /* Data.swift */,
 				CED61C492212552C00415F56 /* Trip */,
 			);
 			path = Model;
@@ -154,6 +157,7 @@
 				CED61C4B2212555500415F56 /* TripModel.swift in Sources */,
 				CEAAAD7920634B4700AD6A44 /* AppDelegate.swift in Sources */,
 				CED61C4D2212556600415F56 /* TripFunctions.swift in Sources */,
+				CED61C4F2212577B00415F56 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
