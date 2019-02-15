@@ -17,6 +17,9 @@
 		CED61C5522125CE400415F56 /* TripsVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED61C5422125CE400415F56 /* TripsVC.storyboard */; };
 		CED61C572212640700415F56 /* TripTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C562212640700415F56 /* TripTVCell.swift */; };
 		CED61C5A22164F4B00415F56 /* UiViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C5922164F4B00415F56 /* UiViewExtension.swift */; };
+		CED61C5D221650EC00415F56 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C5C221650EC00415F56 /* Theme.swift */; };
+		CED61C5F2216520000415F56 /* FugazOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED61C5E2216520000415F56 /* FugazOne-Regular.ttf */; };
+		CED61C612216535500415F56 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CED61C602216535500415F56 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		CED61C5422125CE400415F56 /* TripsVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsVC.storyboard; sourceTree = "<group>"; };
 		CED61C562212640700415F56 /* TripTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTVCell.swift; sourceTree = "<group>"; };
 		CED61C5922164F4B00415F56 /* UiViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewExtension.swift; sourceTree = "<group>"; };
+		CED61C5C221650EC00415F56 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		CED61C5E2216520000415F56 /* FugazOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FugazOne-Regular.ttf"; sourceTree = "<group>"; };
+		CED61C602216535500415F56 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 		CEAAAD7720634B4700AD6A44 /* Itinerary */ = {
 			isa = PBXGroup;
 			children = (
+				CED61C5B221650E000415F56 /* Resources */,
 				CED61C5822164F1F00415F56 /* Extensions */,
 				CED61C482212551E00415F56 /* Model */,
 				CED61C5022125C7700415F56 /* Views */,
@@ -117,6 +124,16 @@
 				CED61C5922164F4B00415F56 /* UiViewExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CED61C5B221650E000415F56 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CED61C5E2216520000415F56 /* FugazOne-Regular.ttf */,
+				CED61C5C221650EC00415F56 /* Theme.swift */,
+				CED61C602216535500415F56 /* Colors.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,8 +196,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED61C612216535500415F56 /* Colors.xcassets in Resources */,
 				CED61C5522125CE400415F56 /* TripsVC.storyboard in Resources */,
 				CEAAAD8320634B4700AD6A44 /* LaunchScreen.storyboard in Resources */,
+				CED61C5F2216520000415F56 /* FugazOne-Regular.ttf in Resources */,
 				CEAAAD8020634B4700AD6A44 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CED61C572212640700415F56 /* TripTVCell.swift in Sources */,
+				CED61C5D221650EC00415F56 /* Theme.swift in Sources */,
 				CED61C5A22164F4B00415F56 /* UiViewExtension.swift in Sources */,
 				CED61C5322125CD000415F56 /* TripsVC.swift in Sources */,
 				CED61C4B2212555500415F56 /* TripModel.swift in Sources */,

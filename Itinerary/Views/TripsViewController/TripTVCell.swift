@@ -17,7 +17,8 @@ class TripTVCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         bgView.addShadowAndRoundedCorners()
-        
+        title.font = UIFont(name: Theme.mainFontName, size: 32)
+        bgView.backgroundColor = Theme.accent
     }
     
     func setup(tripModel: TripModel){

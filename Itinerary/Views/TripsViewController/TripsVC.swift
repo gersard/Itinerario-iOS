@@ -14,6 +14,7 @@ class TripsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = Theme.background
         
         self.tvTrip.dataSource = self
         self.tvTrip.delegate = self
