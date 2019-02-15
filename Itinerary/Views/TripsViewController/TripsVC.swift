@@ -11,10 +11,12 @@ import UIKit
 class TripsVC: UIViewController {
 
     @IBOutlet weak var tvTrip: UITableView!
+    @IBOutlet weak var btnAdd: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = Theme.background
+        btnAdd.styleToFloatingActionButton()
         
         self.tvTrip.dataSource = self
         self.tvTrip.delegate = self
@@ -24,7 +26,9 @@ class TripsVC: UIViewController {
         }
         
     }
-
+    @IBAction func btnAddPressed(_ sender: Any) {
+    }
+    
 }
 
 extension TripsVC : UITableViewDataSource, UITableViewDelegate{

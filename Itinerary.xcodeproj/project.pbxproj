@@ -20,6 +20,7 @@
 		CED61C5D221650EC00415F56 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C5C221650EC00415F56 /* Theme.swift */; };
 		CED61C5F2216520000415F56 /* FugazOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED61C5E2216520000415F56 /* FugazOne-Regular.ttf */; };
 		CED61C612216535500415F56 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CED61C602216535500415F56 /* Colors.xcassets */; };
+		CED61C6322165C5700415F56 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C6222165C5700415F56 /* UIButtonExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		CED61C5C221650EC00415F56 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		CED61C5E2216520000415F56 /* FugazOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FugazOne-Regular.ttf"; sourceTree = "<group>"; };
 		CED61C602216535500415F56 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		CED61C6222165C5700415F56 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				CED61C5922164F4B00415F56 /* UiViewExtension.swift */,
+				CED61C6222165C5700415F56 /* UIButtonExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				CED61C5A22164F4B00415F56 /* UiViewExtension.swift in Sources */,
 				CED61C5322125CD000415F56 /* TripsVC.swift in Sources */,
 				CED61C4B2212555500415F56 /* TripModel.swift in Sources */,
+				CED61C6322165C5700415F56 /* UIButtonExtension.swift in Sources */,
 				CEAAAD7920634B4700AD6A44 /* AppDelegate.swift in Sources */,
 				CED61C4D2212556600415F56 /* TripFunctions.swift in Sources */,
 				CED61C4F2212577B00415F56 /* Data.swift in Sources */,

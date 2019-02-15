@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KaN-No-tAk">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,24 +20,22 @@
             <objects>
                 <viewController id="KaN-No-tAk" customClass="TripsVC" customModule="Itinerary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gkr-oq-hcY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Ek-Pg-uCc">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Ek-Pg-uCc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TripCell" rowHeight="160" id="PP4-XJ-wjS" customClass="TripTVCell" customModule="Itinerary" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="160"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PP4-XJ-wjS" id="910-s9-V5d">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="159.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="159.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mAu-Gc-Gdz">
-                                                    <rect key="frame" x="15" y="15" width="340" height="128"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mAu-Gc-Gdz">
+                                                    <rect key="frame" x="24" y="17" width="366" height="126"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kak-RW-I9a">
                                                             <rect key="frame" x="8" y="41" width="309" height="52"/>
@@ -51,6 +49,13 @@
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="mAu-Gc-Gdz" firstAttribute="leading" secondItem="910-s9-V5d" secondAttribute="leadingMargin" constant="4" id="Eyw-0P-t8r"/>
+                                                <constraint firstItem="mAu-Gc-Gdz" firstAttribute="top" secondItem="910-s9-V5d" secondAttribute="topMargin" constant="6" id="Iqv-5t-mI6"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="mAu-Gc-Gdz" secondAttribute="bottom" constant="6" id="LWD-TW-7om"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="mAu-Gc-Gdz" secondAttribute="trailing" constant="4" id="WYO-Kl-3Eh"/>
+                                                <constraint firstItem="mAu-Gc-Gdz" firstAttribute="centerX" secondItem="910-s9-V5d" secondAttribute="centerX" id="lNx-sW-NQw"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
@@ -60,11 +65,31 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHc-TV-CWj">
+                                <rect key="frame" x="342" y="780" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="iAn-mM-oYz"/>
+                                    <constraint firstAttribute="width" constant="56" id="rB2-em-o49"/>
+                                </constraints>
+                                <state key="normal" image="ic_add_white"/>
+                                <connections>
+                                    <action selector="btnAddPressed:" destination="KaN-No-tAk" eventType="touchUpInside" id="Map-qo-nNb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="s2z-X0-KKV" firstAttribute="trailing" secondItem="8Ek-Pg-uCc" secondAttribute="trailing" id="2iG-uD-94t"/>
+                            <constraint firstItem="8Ek-Pg-uCc" firstAttribute="leading" secondItem="s2z-X0-KKV" secondAttribute="leading" id="CPw-3d-m8N"/>
+                            <constraint firstItem="s2z-X0-KKV" firstAttribute="trailing" secondItem="aHc-TV-CWj" secondAttribute="trailing" constant="16" id="IVH-xj-WSM"/>
+                            <constraint firstItem="s2z-X0-KKV" firstAttribute="bottom" secondItem="8Ek-Pg-uCc" secondAttribute="bottom" id="fS6-TC-1dF"/>
+                            <constraint firstItem="s2z-X0-KKV" firstAttribute="bottom" secondItem="aHc-TV-CWj" secondAttribute="bottom" constant="26" id="zGr-Eh-b4y"/>
+                            <constraint firstItem="8Ek-Pg-uCc" firstAttribute="top" secondItem="Gkr-oq-hcY" secondAttribute="top" id="zU8-NO-Eec"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="s2z-X0-KKV"/>
                     </view>
                     <connections>
+                        <outlet property="btnAdd" destination="aHc-TV-CWj" id="jDp-eA-yG4"/>
                         <outlet property="tvTrip" destination="8Ek-Pg-uCc" id="900-wv-KMb"/>
                     </connections>
                 </viewController>
@@ -73,4 +98,7 @@
             <point key="canvasLocation" x="85.599999999999994" y="152.47376311844079"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_add_white" width="24" height="24"/>
+    </resources>
 </document>
