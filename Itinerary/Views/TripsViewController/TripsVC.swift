@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TripsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TripsVC: UIViewController {
 
     @IBOutlet weak var tvTrip: UITableView!
     
@@ -23,6 +23,10 @@ class TripsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
         
     }
+
+}
+
+extension TripsVC : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Data.tripModels.count
@@ -39,5 +43,4 @@ class TripsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160
     }
-
 }

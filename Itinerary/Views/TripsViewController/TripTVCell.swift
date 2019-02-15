@@ -16,11 +16,8 @@ class TripTVCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        bgView.addShadowAndRoundedCorners()
         
-        bgView.layer.shadowOpacity = 1
-        bgView.layer.shadowOffset = CGSize.zero
-        bgView.layer.shadowColor = UIColor.darkGray.cgColor
-        bgView.layer.cornerRadius = 10
     }
     
     func setup(tripModel: TripModel){

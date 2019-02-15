@@ -16,6 +16,7 @@
 		CED61C5322125CD000415F56 /* TripsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C5222125CD000415F56 /* TripsVC.swift */; };
 		CED61C5522125CE400415F56 /* TripsVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED61C5422125CE400415F56 /* TripsVC.storyboard */; };
 		CED61C572212640700415F56 /* TripTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C562212640700415F56 /* TripTVCell.swift */; };
+		CED61C5A22164F4B00415F56 /* UiViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C5922164F4B00415F56 /* UiViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		CED61C5222125CD000415F56 /* TripsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsVC.swift; sourceTree = "<group>"; };
 		CED61C5422125CE400415F56 /* TripsVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsVC.storyboard; sourceTree = "<group>"; };
 		CED61C562212640700415F56 /* TripTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTVCell.swift; sourceTree = "<group>"; };
+		CED61C5922164F4B00415F56 /* UiViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		CEAAAD7720634B4700AD6A44 /* Itinerary */ = {
 			isa = PBXGroup;
 			children = (
+				CED61C5822164F1F00415F56 /* Extensions */,
 				CED61C482212551E00415F56 /* Model */,
 				CED61C5022125C7700415F56 /* Views */,
 				CEAAAD7820634B4700AD6A44 /* AppDelegate.swift */,
@@ -106,6 +109,14 @@
 				CED61C562212640700415F56 /* TripTVCell.swift */,
 			);
 			path = TripsViewController;
+			sourceTree = "<group>";
+		};
+		CED61C5822164F1F00415F56 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CED61C5922164F4B00415F56 /* UiViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CED61C572212640700415F56 /* TripTVCell.swift in Sources */,
+				CED61C5A22164F4B00415F56 /* UiViewExtension.swift in Sources */,
 				CED61C5322125CD000415F56 /* TripsVC.swift in Sources */,
 				CED61C4B2212555500415F56 /* TripModel.swift in Sources */,
 				CEAAAD7920634B4700AD6A44 /* AppDelegate.swift in Sources */,
