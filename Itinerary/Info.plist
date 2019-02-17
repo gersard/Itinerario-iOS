@@ -45,5 +45,7 @@
 	<array>
 		<string>FugazOne-Regular.ttf</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Necesario para que puedas escoger tu foto</string>
 </dict>
 </plist>
