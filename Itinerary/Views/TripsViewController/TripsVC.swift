@@ -26,6 +26,16 @@ class TripsVC: UIViewController {
         }
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toAddTripSegue"{
+            let addTripVc = segue.destination as? AddTripVC
+            addTripVc?.doneSaving = {[weak self] in
+                self?.tvTrip.reloadData()
+            }
+        }
+    }
+    
     @IBAction func btnAddPressed(_ sender: Any) {
     }
     

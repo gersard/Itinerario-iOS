@@ -74,7 +74,7 @@
                                 <state key="normal" image="ic_add_white"/>
                                 <connections>
                                     <action selector="btnAddPressed:" destination="KaN-No-tAk" eventType="touchUpInside" id="Map-qo-nNb"/>
-                                    <segue destination="dN6-3B-lvE" kind="presentation" id="Hqf-v5-cP0"/>
+                                    <segue destination="dN6-3B-lvE" kind="presentation" identifier="toAddTripSegue" id="Hqf-v5-cP0"/>
                                 </connections>
                             </button>
                         </subviews>

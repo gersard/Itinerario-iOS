@@ -16,6 +16,8 @@ class AddTripVC: UIViewController {
     @IBOutlet weak var btnCancel: UIButton!
     @IBOutlet weak var btnSave: UIButton!
     
+    var doneSaving: (() -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        viewPopup.addShadowAndRoundedCorners()
@@ -29,6 +31,10 @@ class AddTripVC: UIViewController {
     }
     
     @IBAction func save(_ sender: Any) {
+        Tripfunctions.createTrip(tripModel: TripModel(title: tfTrip.text!))
+        if let doneSaving = doneSaving {
+            doneSaving()
+        }
         dismiss(animated: true, completion: nil)
     }
 }
