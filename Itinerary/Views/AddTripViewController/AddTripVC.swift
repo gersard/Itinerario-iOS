@@ -10,21 +10,25 @@ import UIKit
 
 class AddTripVC: UIViewController {
 
+    @IBOutlet weak var viewPopup: UIView!
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var tfTrip: UITextField!
+    @IBOutlet weak var btnCancel: UIButton!
+    @IBOutlet weak var btnSave: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+//        viewPopup.addShadowAndRoundedCorners()
+//        viewPopup.backgroundColor = Theme.background
+        lblTitle.font = UIFont(name: Theme.mainFontName, size: 24)
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func cancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
-    */
-
+    
+    @IBAction func save(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }
