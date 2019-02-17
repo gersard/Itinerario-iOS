@@ -74,6 +74,7 @@
                                 <state key="normal" image="ic_add_white"/>
                                 <connections>
                                     <action selector="btnAddPressed:" destination="KaN-No-tAk" eventType="touchUpInside" id="Map-qo-nNb"/>
+                                    <segue destination="dN6-3B-lvE" kind="presentation" id="Hqf-v5-cP0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -96,6 +97,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kST-lJ-EkK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="85.599999999999994" y="152.47376311844079"/>
+        </scene>
+        <!--AddTripVC-->
+        <scene sceneID="Ylx-91-mwd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddTripVC" id="dN6-3B-lvE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zli-VD-Ppw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="823" y="151"/>
         </scene>
     </scenes>
     <resources>
