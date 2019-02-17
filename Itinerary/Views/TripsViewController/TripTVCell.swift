@@ -10,6 +10,7 @@ import UIKit
 
 class TripTVCell: UITableViewCell {
 
+    @IBOutlet weak var ivBackground: UIImageView!
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var title: UILabel!
     
@@ -19,10 +20,12 @@ class TripTVCell: UITableViewCell {
         bgView.addShadowAndRoundedCorners()
         title.font = UIFont(name: Theme.mainFontName, size: 32)
         bgView.backgroundColor = Theme.accent
+        ivBackground.layer.cornerRadius = bgView.layer.cornerRadius
     }
     
     func setup(tripModel: TripModel){
         self.title.text = tripModel.title
+        self.ivBackground.image = tripModel.image
     }
 
 }
