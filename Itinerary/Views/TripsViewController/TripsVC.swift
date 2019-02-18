@@ -12,8 +12,10 @@ class TripsVC: UIViewController {
 
     @IBOutlet weak var tvTrip: UITableView!
     @IBOutlet weak var btnAdd: UIButton!
+    @IBOutlet var helpView: UIVisualEffectView!
     
     var tripIndexToEdit: Int?
+    let keySeenHelpView = "seenHelpview"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +25,16 @@ class TripsVC: UIViewController {
         self.tvTrip.dataSource = self
         self.tvTrip.delegate = self
         
-        Tripfunctions.readTrips {[weak self] in
-            self?.tvTrip.reloadData()
+        Tripfunctions.readTrips {[unowned self] in
+            self.tvTrip.reloadData()
+            
+            if Data.tripModels.count > 0 {
+                if UserDefaults.standard.bool(forKey: self.keySeenHelpView) == false{
+                    self.view.addSubview(self.helpView)
+                    self.helpView.frame = self.view.frame
+                    
+                }
+            }
         }
         
     }
@@ -43,6 +53,14 @@ class TripsVC: UIViewController {
     @IBAction func btnAddPressed(_ sender: Any) {
     }
     
+    @IBAction func closeHelpView(_ sender: Any) {
+        UIView.animate(withDuration: 0.6, animations: {
+            self.helpView.alpha = 0
+        }){ (success) in
+            self.helpView.removeFromSuperview()
+            UserDefaults.standard.set(true, forKey: self.keySeenHelpView)
+        }
+    }
 }
 
 extension TripsVC : UITableViewDataSource, UITableViewDelegate{
