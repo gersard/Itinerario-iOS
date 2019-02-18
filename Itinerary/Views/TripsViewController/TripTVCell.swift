@@ -25,7 +25,16 @@ class TripTVCell: UITableViewCell {
     
     func setup(tripModel: TripModel){
         self.title.text = tripModel.title
-        self.ivBackground.image = tripModel.image
+        
+        if let tripImage = tripModel.image{
+            self.ivBackground.alpha = 0.3
+            self.ivBackground.image = tripImage
+            
+            UIView.animate(withDuration: 0.8){
+                self.ivBackground.alpha = 1
+            }
+        }
+        
     }
 
 }

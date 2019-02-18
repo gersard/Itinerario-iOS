@@ -36,6 +36,7 @@ class TripsVC: UIViewController {
             addTripVc?.doneSaving = {[weak self] in
                 self?.tvTrip.reloadData()
             }
+            tripIndexToEdit = nil
         }
     }
     

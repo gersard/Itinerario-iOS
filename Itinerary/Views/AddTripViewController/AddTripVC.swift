@@ -39,6 +39,7 @@ class AddTripVC: UIViewController {
             let trip = Data.tripModels[index]
             tfTrip.text = trip.title
             ivBackground.image = trip.image
+            lblTitle.text = "Edit Trip"
         }
     }
     
