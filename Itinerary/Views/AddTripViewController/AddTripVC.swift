@@ -20,6 +20,7 @@ class AddTripVC: UIViewController {
     @IBOutlet weak var btnCamera: UIButton!
     
     var doneSaving: (() -> Void)?
+    var tripIndexToEdit: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,12 @@ class AddTripVC: UIViewController {
         lblTitle.layer.shadowColor = UIColor.white.cgColor
         lblTitle.layer.shadowOffset = CGSize.zero
         lblTitle.layer.shadowRadius = 5
+        
+        if let index = tripIndexToEdit{
+            let trip = Data.tripModels[index]
+            tfTrip.text = trip.title
+            ivBackground.image = trip.image
+        }
     }
     
     @IBAction func cancel(_ sender: Any) {
@@ -59,7 +66,13 @@ class AddTripVC: UIViewController {
         
             return
         }
-        Tripfunctions.createTrip(tripModel: TripModel(title: newTripName, image: ivBackground.image))
+
+        if let index = tripIndexToEdit {
+            Tripfunctions.updateTrip(at: index, title: tfTrip.text!, image: ivBackground.image)
+        }else{
+            Tripfunctions.createTrip(tripModel: TripModel(title: newTripName, image: ivBackground.image))
+        }
+
         if let doneSaving = doneSaving {
             doneSaving()
         }

@@ -13,6 +13,8 @@ class TripsVC: UIViewController {
     @IBOutlet weak var tvTrip: UITableView!
     @IBOutlet weak var btnAdd: UIButton!
     
+    var tripIndexToEdit: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = Theme.background
@@ -30,6 +32,7 @@ class TripsVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toAddTripSegue"{
             let addTripVc = segue.destination as? AddTripVC
+            addTripVc?.tripIndexToEdit = tripIndexToEdit
             addTripVc?.doneSaving = {[weak self] in
                 self?.tvTrip.reloadData()
             }
@@ -79,5 +82,18 @@ extension TripsVC : UITableViewDataSource, UITableViewDelegate{
         }
         delete.image = UIImage(named: "ic_delete")
         return UISwipeActionsConfiguration(actions: [delete])
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let edit = UIContextualAction(style: .normal, title: "Editar") { (contextualAction, view, actionPerformed: (Bool) -> ()) in
+            self.tripIndexToEdit = indexPath.row
+            self.performSegue(withIdentifier: "toAddTripSegue", sender: nil)
+            actionPerformed(true)
+        }
+        
+        edit.backgroundColor = UIColor(named: "Edit")
+        
+        return UISwipeActionsConfiguration(actions: [edit])
     }
 }

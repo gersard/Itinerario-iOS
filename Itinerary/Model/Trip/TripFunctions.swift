@@ -6,7 +6,8 @@
 //  Copyright © 2019 Gerardo Mascayano. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
 class Tripfunctions {
     
     static func createTrip(tripModel: TripModel){
@@ -29,8 +30,9 @@ class Tripfunctions {
         
     }
     
-    static func updateTrip(tripModel: TripModel){
-        
+    static func updateTrip(at index: Int, title: String, image: UIImage? = nil){
+        Data.tripModels[index].title = title
+        Data.tripModels[index].image = image
     }
     
     static func deleteTrip(index: Int){
