@@ -11,8 +11,8 @@ class MockData{
     
     static func createMockTripModelData() -> [TripModel] {
         var mockTrips = [TripModel]()
-        mockTrips.append(TripModel(title: "Trip to Bali!", image: #imageLiteral(resourceName: "bali"), dayModels: createmockDayModelData()))
-        mockTrips.append(TripModel(title: "Mexico", image: #imageLiteral(resourceName: "mexico")))
+        mockTrips.append(TripModel(title: "Trip to Bali!", image: nil, dayModels: createmockDayModelData()))
+        mockTrips.append(TripModel(title: "Mexico", image: nil))
         mockTrips.append(TripModel(title: "Russian Trip"))
         return mockTrips
     }
@@ -34,7 +34,7 @@ class MockData{
         
         switch sectionTitle {
         case "April 18":
-            models.append(ActivityModel(title: "SLC", subTitle: "12:25 - 13:45", activityType: ActivityType.flight, photo: #imageLiteral(resourceName: "slc airport")))
+            models.append(ActivityModel(title: "SLC", subTitle: "12:25 - 13:45", activityType: ActivityType.flight, photo: nil))
             models.append(ActivityModel(title: "LAX", subTitle: "17:00 - 11:00", activityType: ActivityType.flight))
         case "April 19":
             models.append(ActivityModel(title: "DPS", subTitle: "", activityType: ActivityType.flight))

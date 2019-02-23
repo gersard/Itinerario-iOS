@@ -29,6 +29,8 @@
 		CED61C732221B7C800415F56 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C722221B7C800415F56 /* ActivityModel.swift */; };
 		CED61C752221B84500415F56 /* ActivityTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C742221B84500415F56 /* ActivityTypeEnum.swift */; };
 		CED61C772221B91B00415F56 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C762221B91B00415F56 /* MockData.swift */; };
+		CED61C7A2221BB8C00415F56 /* ActivitiesVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED61C792221BB8C00415F56 /* ActivitiesVC.storyboard */; };
+		CED61C7C2221BBC000415F56 /* ActivitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C7B2221BBC000415F56 /* ActivitiesVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		CED61C722221B7C800415F56 /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
 		CED61C742221B84500415F56 /* ActivityTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTypeEnum.swift; sourceTree = "<group>"; };
 		CED61C762221B91B00415F56 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		CED61C792221BB8C00415F56 /* ActivitiesVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActivitiesVC.storyboard; sourceTree = "<group>"; };
+		CED61C7B2221BBC000415F56 /* ActivitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 		CED61C5022125C7700415F56 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CED61C782221BB4F00415F56 /* ActivitiesViewController */,
 				CED61C662218FF3D00415F56 /* AddTripViewController */,
 				CED61C5122125C8600415F56 /* TripsViewController */,
 			);
@@ -195,6 +200,15 @@
 			path = Activity;
 			sourceTree = "<group>";
 		};
+		CED61C782221BB4F00415F56 /* ActivitiesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CED61C792221BB8C00415F56 /* ActivitiesVC.storyboard */,
+				CED61C7B2221BBC000415F56 /* ActivitiesVC.swift */,
+			);
+			path = ActivitiesViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -260,6 +274,7 @@
 				CED61C5522125CE400415F56 /* TripsVC.storyboard in Resources */,
 				CEAAAD8320634B4700AD6A44 /* LaunchScreen.storyboard in Resources */,
 				CED61C5F2216520000415F56 /* FugazOne-Regular.ttf in Resources */,
+				CED61C7A2221BB8C00415F56 /* ActivitiesVC.storyboard in Resources */,
 				CEAAAD8020634B4700AD6A44 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +289,7 @@
 				CED61C572212640700415F56 /* TripTVCell.swift in Sources */,
 				CED61C5D221650EC00415F56 /* Theme.swift in Sources */,
 				CED61C5A22164F4B00415F56 /* UiViewExtension.swift in Sources */,
+				CED61C7C2221BBC000415F56 /* ActivitiesVC.swift in Sources */,
 				CED61C6D2219046000415F56 /* AppUiButton.swift in Sources */,
 				CED61C5322125CD000415F56 /* TripsVC.swift in Sources */,
 				CED61C4B2212555500415F56 /* TripModel.swift in Sources */,
