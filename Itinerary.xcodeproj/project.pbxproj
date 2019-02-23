@@ -25,6 +25,10 @@
 		CED61C682218FF7D00415F56 /* AddTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C672218FF7D00415F56 /* AddTripVC.swift */; };
 		CED61C6B2219031200415F56 /* PopupUiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C6A2219031200415F56 /* PopupUiView.swift */; };
 		CED61C6D2219046000415F56 /* AppUiButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C6C2219046000415F56 /* AppUiButton.swift */; };
+		CED61C702221B72800415F56 /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C6F2221B72800415F56 /* DayModel.swift */; };
+		CED61C732221B7C800415F56 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C722221B7C800415F56 /* ActivityModel.swift */; };
+		CED61C752221B84500415F56 /* ActivityTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C742221B84500415F56 /* ActivityTypeEnum.swift */; };
+		CED61C772221B91B00415F56 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C762221B91B00415F56 /* MockData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		CED61C672218FF7D00415F56 /* AddTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripVC.swift; sourceTree = "<group>"; };
 		CED61C6A2219031200415F56 /* PopupUiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupUiView.swift; sourceTree = "<group>"; };
 		CED61C6C2219046000415F56 /* AppUiButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUiButton.swift; sourceTree = "<group>"; };
+		CED61C6F2221B72800415F56 /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
+		CED61C722221B7C800415F56 /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
+		CED61C742221B84500415F56 /* ActivityTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTypeEnum.swift; sourceTree = "<group>"; };
+		CED61C762221B91B00415F56 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +102,11 @@
 		CED61C482212551E00415F56 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CED61C4E2212577B00415F56 /* Data.swift */,
+				CED61C712221B7BA00415F56 /* Activity */,
+				CED61C6E2221B6E900415F56 /* Day */,
 				CED61C492212552C00415F56 /* Trip */,
+				CED61C4E2212577B00415F56 /* Data.swift */,
+				CED61C762221B91B00415F56 /* MockData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,6 +176,23 @@
 				CED61C6C2219046000415F56 /* AppUiButton.swift */,
 			);
 			path = CustomControls;
+			sourceTree = "<group>";
+		};
+		CED61C6E2221B6E900415F56 /* Day */ = {
+			isa = PBXGroup;
+			children = (
+				CED61C6F2221B72800415F56 /* DayModel.swift */,
+			);
+			path = Day;
+			sourceTree = "<group>";
+		};
+		CED61C712221B7BA00415F56 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				CED61C722221B7C800415F56 /* ActivityModel.swift */,
+				CED61C742221B84500415F56 /* ActivityTypeEnum.swift */,
+			);
+			path = Activity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,8 +280,12 @@
 				CED61C6B2219031200415F56 /* PopupUiView.swift in Sources */,
 				CED61C682218FF7D00415F56 /* AddTripVC.swift in Sources */,
 				CED61C6322165C5700415F56 /* UIButtonExtension.swift in Sources */,
+				CED61C702221B72800415F56 /* DayModel.swift in Sources */,
+				CED61C752221B84500415F56 /* ActivityTypeEnum.swift in Sources */,
 				CEAAAD7920634B4700AD6A44 /* AppDelegate.swift in Sources */,
 				CED61C4D2212556600415F56 /* TripFunctions.swift in Sources */,
+				CED61C772221B91B00415F56 /* MockData.swift in Sources */,
+				CED61C732221B7C800415F56 /* ActivityModel.swift in Sources */,
 				CED61C4F2212577B00415F56 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

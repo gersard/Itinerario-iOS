@@ -22,6 +22,10 @@ class Tripfunctions {
 //                Data.tripModels.append(TripModel(title: "Estados Unidos"))
 //            }
             
+            if Data.tripModels.count == 0 {
+                Data.tripModels = MockData.createMockTripModelData()
+            }
+            
             DispatchQueue.main.async {
                 completion()
             }

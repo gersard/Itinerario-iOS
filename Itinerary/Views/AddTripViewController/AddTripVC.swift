@@ -81,6 +81,7 @@ class AddTripVC: UIViewController {
     }
     fileprivate func presentPhotoPickerController() {
         let myPickerController = UIImagePickerController()
+        myPickerController.allowsEditing = true
         myPickerController.delegate = self
         myPickerController.sourceType = .photoLibrary
         self.present(myPickerController, animated: true, completion: nil)
@@ -123,10 +124,14 @@ class AddTripVC: UIViewController {
 extension AddTripVC : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = info[.originalImage] as? UIImage{
+        if let image = info[.editedImage] as? UIImage {
+            self.ivBackground.image = image
+            self.ivBackground.contentMode = .scaleAspectFill
+        }else if let image = info[.originalImage] as? UIImage{
             self.ivBackground.image = image
             self.ivBackground.contentMode = .scaleAspectFill
         }
+        
         dismiss(animated: true, completion: nil)
     }
     
