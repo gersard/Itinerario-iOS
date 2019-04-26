@@ -32,6 +32,7 @@
 		CED61C7A2221BB8C00415F56 /* ActivitiesVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED61C792221BB8C00415F56 /* ActivitiesVC.storyboard */; };
 		CED61C7C2221BBC000415F56 /* ActivitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C7B2221BBC000415F56 /* ActivitiesVC.swift */; };
 		CEEC7DB42272A52F0011F0C1 /* HeaderTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC7DB32272A52F0011F0C1 /* HeaderTVCell.swift */; };
+		CEEC7DB62272AC2A0011F0C1 /* RowActivityTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC7DB52272AC2A0011F0C1 /* RowActivityTVCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		CED61C792221BB8C00415F56 /* ActivitiesVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActivitiesVC.storyboard; sourceTree = "<group>"; };
 		CED61C7B2221BBC000415F56 /* ActivitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesVC.swift; sourceTree = "<group>"; };
 		CEEC7DB32272A52F0011F0C1 /* HeaderTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTVCell.swift; sourceTree = "<group>"; };
+		CEEC7DB52272AC2A0011F0C1 /* RowActivityTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowActivityTVCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 				CED61C792221BB8C00415F56 /* ActivitiesVC.storyboard */,
 				CED61C7B2221BBC000415F56 /* ActivitiesVC.swift */,
 				CEEC7DB32272A52F0011F0C1 /* HeaderTVCell.swift */,
+				CEEC7DB52272AC2A0011F0C1 /* RowActivityTVCell.swift */,
 			);
 			path = ActivitiesViewController;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				CED61C6B2219031200415F56 /* PopupUiView.swift in Sources */,
 				CED61C682218FF7D00415F56 /* AddTripVC.swift in Sources */,
 				CED61C6322165C5700415F56 /* UIButtonExtension.swift in Sources */,
+				CEEC7DB62272AC2A0011F0C1 /* RowActivityTVCell.swift in Sources */,
 				CED61C702221B72800415F56 /* DayModel.swift in Sources */,
 				CED61C752221B84500415F56 /* ActivityTypeEnum.swift in Sources */,
 				CEAAAD7920634B4700AD6A44 /* AppDelegate.swift in Sources */,

@@ -53,10 +53,9 @@ extension ActivitiesVC: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "activityCell")
-        if cell == nil {
-            cell = UITableViewCell()
-        }
+        var cell = tableView.dequeueReusableCell(withIdentifier: "RowActivityTVCell") as? RowActivityTVCell
+        let model = tripModel?.dayModels[indexPath.section].activityModels[indexPath.row]
+        cell?.setup(activity: model!)
         return cell!
     }
     
