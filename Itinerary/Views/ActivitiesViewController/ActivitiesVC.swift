@@ -40,7 +40,7 @@ class ActivitiesVC: UIViewController {
     
     @IBAction func btnAddPressed(_ sender: Any) {
         let alert = UIAlertController(title: "Wich would you like to add?", message: nil, preferredStyle: .actionSheet)
-        let dayAction = UIAlertAction(title: "Day", style: .default, handler: handleAddDay) 
+        let dayAction = UIAlertAction(title: "Day", style: .default, handler: handleAddDay)
         let activityAction = UIAlertAction(title: "Activity", style: .default) { (_) in
             
         }
@@ -50,6 +50,9 @@ class ActivitiesVC: UIViewController {
         alert.addAction(activityAction)
         alert.addAction(cancelAction)
         
+        alert.popoverPresentationController?.sourceView = sender as? UIView
+//        alert.popoverPresentationController?.sourceRect = ((sender as? UIView)?.bounds)!
+        alert.popoverPresentationController?.sourceRect = CGRect(x: 0, y: -4, width: btnAdd.bounds.width, height: 0)
 //        alert.view.tintColor = Theme.tint
         
         present(alert, animated: true, completion: nil)
