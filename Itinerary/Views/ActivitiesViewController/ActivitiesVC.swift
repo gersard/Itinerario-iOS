@@ -12,14 +12,16 @@ class ActivitiesVC: UIViewController {
     
     @IBOutlet weak var ivBackground: UIImageView!
     @IBOutlet weak var tvActivities: UITableView!
+    @IBOutlet weak var btnAdd: AppUiButton!
     var tripId: UUID!
     var tripTitle: String?
     var tripModel: TripModel?
     var sectionHeaderHeight: CGFloat = 54
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = tripTitle
+        btnAdd.styleToFloatingActionButton()
         self.tvActivities.dataSource = self
         self.tvActivities.delegate = self
         
@@ -36,6 +38,26 @@ class ActivitiesVC: UIViewController {
         sectionHeaderHeight = tvActivities.dequeueReusableCell(withIdentifier: HeaderTVCell.identifier)!.contentView.bounds.height
     }
     
+    @IBAction func btnAddPressed(_ sender: Any) {
+        let alert = UIAlertController(title: "Wich would you like to add?", message: nil, preferredStyle: .actionSheet)
+        let dayAction = UIAlertAction(title: "Day", style: .default, handler: handleAddDay) 
+        let activityAction = UIAlertAction(title: "Activity", style: .default) { (_) in
+            
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alert.addAction(dayAction)
+        alert.addAction(activityAction)
+        alert.addAction(cancelAction)
+        
+//        alert.view.tintColor = Theme.tint
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func handleAddDay(action: UIAlertAction){
+        
+    }
 
 }
 extension ActivitiesVC: UITableViewDataSource{

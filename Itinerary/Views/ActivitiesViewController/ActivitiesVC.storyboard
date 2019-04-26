@@ -35,16 +35,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iEV-t5-aFU">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="53.666666666666664"/>
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="54"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="two-eJ-ST1">
-                                                            <rect key="frame" x="0.0" y="0.0" width="167.66666666666666" height="53.666666666666664"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="167.66666666666666" height="54"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tV-H5-6ul">
-                                                            <rect key="frame" x="175.66666666666663" y="0.0" width="167.33333333333337" height="53.666666666666664"/>
+                                                            <rect key="frame" x="175.66666666666663" y="0.0" width="167.33333333333337" height="54"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -129,9 +129,23 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76b-eX-seR" customClass="AppUiButton" customModule="Itinerary" customModuleProvider="target">
+                                <rect key="frame" x="299" y="722" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="56" id="BUL-QL-eZy"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="56" id="H0w-dH-5vV"/>
+                                    <constraint firstAttribute="width" constant="56" id="TJ6-1b-XoL"/>
+                                    <constraint firstAttribute="height" constant="56" id="vc5-kP-MJi"/>
+                                </constraints>
+                                <state key="normal" image="ic_add_white"/>
+                                <connections>
+                                    <action selector="btnAddPressed:" destination="9MZ-QU-WEd" eventType="touchUpInside" id="4oJ-K5-GRJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="3Ev-zn-csh" firstAttribute="trailing" secondItem="76b-eX-seR" secondAttribute="trailing" constant="20" id="Ccj-AQ-hWl"/>
                             <constraint firstItem="E3k-DG-wG8" firstAttribute="top" secondItem="yso-0F-jDc" secondAttribute="top" id="ao2-4z-QTc"/>
                             <constraint firstItem="E3k-DG-wG8" firstAttribute="leading" secondItem="3Ev-zn-csh" secondAttribute="leading" id="arv-DH-Iir"/>
                             <constraint firstItem="3Ev-zn-csh" firstAttribute="trailing" secondItem="E3k-DG-wG8" secondAttribute="trailing" id="cr1-fS-wGK"/>
@@ -140,10 +154,12 @@
                             <constraint firstAttribute="bottom" secondItem="Ym9-uO-sMW" secondAttribute="bottom" id="kWd-h5-9pG"/>
                             <constraint firstItem="Ym9-uO-sMW" firstAttribute="leading" secondItem="3Ev-zn-csh" secondAttribute="leading" id="oYS-78-S8I"/>
                             <constraint firstItem="Ym9-uO-sMW" firstAttribute="top" secondItem="3Ev-zn-csh" secondAttribute="top" id="yC5-pG-tfv"/>
+                            <constraint firstItem="3Ev-zn-csh" firstAttribute="bottom" secondItem="76b-eX-seR" secondAttribute="bottom" id="zpu-72-Jpi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3Ev-zn-csh"/>
                     </view>
                     <connections>
+                        <outlet property="btnAdd" destination="76b-eX-seR" id="F56-jH-oHf"/>
                         <outlet property="ivBackground" destination="E3k-DG-wG8" id="5P4-tc-Edn"/>
                         <outlet property="tvActivities" destination="Ym9-uO-sMW" id="mtv-rG-8dx"/>
                     </connections>
@@ -154,6 +170,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_add_white" width="24" height="24"/>
         <namedColor name="Accent">
             <color red="0.14900000393390656" green="0.20000000298023224" blue="0.22400000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
