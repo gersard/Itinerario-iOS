@@ -31,6 +31,7 @@
 		CED61C772221B91B00415F56 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C762221B91B00415F56 /* MockData.swift */; };
 		CED61C7A2221BB8C00415F56 /* ActivitiesVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED61C792221BB8C00415F56 /* ActivitiesVC.storyboard */; };
 		CED61C7C2221BBC000415F56 /* ActivitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C7B2221BBC000415F56 /* ActivitiesVC.swift */; };
+		CEEC7DB42272A52F0011F0C1 /* HeaderTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC7DB32272A52F0011F0C1 /* HeaderTVCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		CED61C762221B91B00415F56 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		CED61C792221BB8C00415F56 /* ActivitiesVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActivitiesVC.storyboard; sourceTree = "<group>"; };
 		CED61C7B2221BBC000415F56 /* ActivitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesVC.swift; sourceTree = "<group>"; };
+		CEEC7DB32272A52F0011F0C1 /* HeaderTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTVCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 			children = (
 				CED61C792221BB8C00415F56 /* ActivitiesVC.storyboard */,
 				CED61C7B2221BBC000415F56 /* ActivitiesVC.swift */,
+				CEEC7DB32272A52F0011F0C1 /* HeaderTVCell.swift */,
 			);
 			path = ActivitiesViewController;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				CED61C752221B84500415F56 /* ActivityTypeEnum.swift in Sources */,
 				CEAAAD7920634B4700AD6A44 /* AppDelegate.swift in Sources */,
 				CED61C4D2212556600415F56 /* TripFunctions.swift in Sources */,
+				CEEC7DB42272A52F0011F0C1 /* HeaderTVCell.swift in Sources */,
 				CED61C772221B91B00415F56 /* MockData.swift in Sources */,
 				CED61C732221B7C800415F56 /* ActivityModel.swift in Sources */,
 				CED61C4F2212577B00415F56 /* Data.swift in Sources */,

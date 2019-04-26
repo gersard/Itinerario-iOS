@@ -14,6 +14,7 @@ class ActivitiesVC: UIViewController {
     @IBOutlet weak var tvActivities: UITableView!
     var tripId: UUID!
     var tripModel: TripModel?
+    var sectionHeaderHeight: CGFloat = 54
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,8 @@ class ActivitiesVC: UIViewController {
             self.ivBackground.image = model.image
             self.tvActivities.reloadData()
         }
+        
+        sectionHeaderHeight = tvActivities.dequeueReusableCell(withIdentifier: "HeaderTVCell")!.contentView.bounds.height
     }
     
 
@@ -39,11 +42,11 @@ extension ActivitiesVC: UITableViewDataSource{
         return self.tripModel?.dayModels.count ?? 0
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let title = tripModel?.dayModels[section].title ?? ""
-        let subtitle = tripModel?.dayModels[section].subtitle ?? ""
-        return "\(title)  \(subtitle)"
-    }
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        let title = tripModel?.dayModels[section].title ?? ""
+//        let subtitle = tripModel?.dayModels[section].subtitle ?? ""
+//        return "\(title)  \(subtitle)"
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tripModel?.dayModels[section].activityModels.count ?? 0
@@ -59,6 +62,16 @@ extension ActivitiesVC: UITableViewDataSource{
     
     
 }
-extension ActivitiesVC: UITableViewDelegate{
+extension ActivitiesVC: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return sectionHeaderHeight
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderTVCell") as? HeaderTVCell
+        let day = tripModel?.dayModels[section]
+        cell?.setup(day: day!)
+        return cell?.contentView
+    }
 }
