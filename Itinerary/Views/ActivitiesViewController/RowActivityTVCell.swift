@@ -9,7 +9,7 @@
 import UIKit
 
 class RowActivityTVCell: UITableViewCell {
-
+    
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblSubtitle: UILabel!

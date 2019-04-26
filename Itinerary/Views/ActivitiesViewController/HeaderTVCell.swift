@@ -9,8 +9,7 @@
 import UIKit
 
 class HeaderTVCell: UITableViewCell {
-    
-    
+        
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblSubtitle: UILabel!
     

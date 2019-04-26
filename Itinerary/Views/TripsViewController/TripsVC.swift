@@ -70,7 +70,7 @@ extension TripsVC : UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TripCell") as! TripTVCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TripTVCell.identifier) as! TripTVCell
         
         cell.setup(tripModel: Data.tripModels[indexPath.row])
         

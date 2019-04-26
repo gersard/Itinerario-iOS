@@ -33,6 +33,7 @@
 		CED61C7C2221BBC000415F56 /* ActivitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED61C7B2221BBC000415F56 /* ActivitiesVC.swift */; };
 		CEEC7DB42272A52F0011F0C1 /* HeaderTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC7DB32272A52F0011F0C1 /* HeaderTVCell.swift */; };
 		CEEC7DB62272AC2A0011F0C1 /* RowActivityTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC7DB52272AC2A0011F0C1 /* RowActivityTVCell.swift */; };
+		CEEC7DB82272B63F0011F0C1 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC7DB72272B63F0011F0C1 /* UITableViewCellExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		CED61C7B2221BBC000415F56 /* ActivitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesVC.swift; sourceTree = "<group>"; };
 		CEEC7DB32272A52F0011F0C1 /* HeaderTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTVCell.swift; sourceTree = "<group>"; };
 		CEEC7DB52272AC2A0011F0C1 /* RowActivityTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowActivityTVCell.swift; sourceTree = "<group>"; };
+		CEEC7DB72272B63F0011F0C1 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 			children = (
 				CED61C5922164F4B00415F56 /* UiViewExtension.swift */,
 				CED61C6222165C5700415F56 /* UIButtonExtension.swift */,
+				CEEC7DB72272B63F0011F0C1 /* UITableViewCellExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				CED61C6D2219046000415F56 /* AppUiButton.swift in Sources */,
 				CED61C5322125CD000415F56 /* TripsVC.swift in Sources */,
 				CED61C4B2212555500415F56 /* TripModel.swift in Sources */,
+				CEEC7DB82272B63F0011F0C1 /* UITableViewCellExtension.swift in Sources */,
 				CED61C6B2219031200415F56 /* PopupUiView.swift in Sources */,
 				CED61C682218FF7D00415F56 /* AddTripVC.swift in Sources */,
 				CED61C6322165C5700415F56 /* UIButtonExtension.swift in Sources */,
