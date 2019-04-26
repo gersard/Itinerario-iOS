@@ -13,11 +13,13 @@ class ActivitiesVC: UIViewController {
     @IBOutlet weak var ivBackground: UIImageView!
     @IBOutlet weak var tvActivities: UITableView!
     var tripId: UUID!
+    var tripTitle: String?
     var tripModel: TripModel?
     var sectionHeaderHeight: CGFloat = 54
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = tripTitle
         self.tvActivities.dataSource = self
         self.tvActivities.delegate = self
         
@@ -26,7 +28,7 @@ class ActivitiesVC: UIViewController {
             self.tripModel = tripModel
             
             guard let model = tripModel else {return}
-            self.title = model.title
+//            self.title = model.title
             self.ivBackground.image = model.image
             self.tvActivities.reloadData()
         }

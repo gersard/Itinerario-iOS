@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,16 +16,16 @@
         </array>
     </customFonts>
     <scenes>
-        <!--TripsVC-->
+        <!--Trips-->
         <scene sceneID="oek-Cb-y4E">
             <objects>
                 <viewController id="KaN-No-tAk" customClass="TripsVC" customModule="Itinerary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gkr-oq-hcY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Ek-Pg-uCc">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TripTVCell" rowHeight="160" id="PP4-XJ-wjS" customClass="TripTVCell" customModule="Itinerary" customModuleProvider="target">
@@ -76,7 +77,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHc-TV-CWj">
-                                <rect key="frame" x="342" y="780" width="56" height="56"/>
+                                <rect key="frame" x="342" y="692" width="56" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="iAn-mM-oYz"/>
                                     <constraint firstAttribute="width" constant="56" id="rB2-em-o49"/>
@@ -99,7 +100,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="s2z-X0-KKV"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ezE-XN-3ka"/>
+                    <navigationItem key="navigationItem" title="Trips" id="ezE-XN-3ka"/>
                     <connections>
                         <outlet property="btnAdd" destination="aHc-TV-CWj" id="jDp-eA-yG4"/>
                         <outlet property="helpView" destination="1gY-oc-74I" id="9La-Bf-cL2"/>
@@ -176,9 +177,17 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u87-1b-fTI" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kac-OH-nOP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="kac-OH-nOP">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="Accent"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="20"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -194,5 +203,8 @@
         <image name="ic_add_white" width="24" height="24"/>
         <image name="img_help_delete" width="276" height="112"/>
         <image name="img_help_edit" width="270" height="129"/>
+        <namedColor name="Accent">
+            <color red="0.14900000393390656" green="0.20000000298023224" blue="0.22400000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
