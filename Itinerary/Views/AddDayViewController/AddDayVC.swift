@@ -17,8 +17,8 @@ class AddDayVC: UIViewController {
     @IBOutlet weak var btnCancel: UIButton!
     @IBOutlet weak var btnSave: UIButton!
     
-    var doneSaving: (() -> Void)?
-    var tripIndexToEdit: Int?
+    var doneSaving: ((DayModel) -> Void)?
+    var tripIndex: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,17 +34,13 @@ class AddDayVC: UIViewController {
     @IBAction func save(_ sender: Any) {
         tfTitle.rightViewMode = .never
         
-        guard tfTitle.hasValue, let _ = tfTitle.text else { return }
+        guard tfTitle.hasValue, let newTitle = tfTitle.text else { return }
 
-//
-//        if let index = tripIndexToEdit {
-//            Tripfunctions.updateTrip(at: index, title: tfTrip.text!, image: ivBackground.image)
-//        }else{
-//            Tripfunctions.createTrip(tripModel: TripModel(title: newTripName, image: ivBackground.image))
-//        }
+        let dayModel = DayModel(title: newTitle, subtitle: tfSubTitle.text ?? "", data: nil)
+        DayFunctions.createDay(at: tripIndex!, dayModel: dayModel)
         
         if let doneSaving = doneSaving {
-            doneSaving()
+            doneSaving(dayModel)
         }
         dismiss(animated: true, completion: nil)
     }

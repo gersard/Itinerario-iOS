@@ -44,7 +44,8 @@ class TripsVC: UIViewController {
             let addTripVc = segue.destination as? AddTripVC
             addTripVc?.tripIndexToEdit = tripIndexToEdit
             addTripVc?.doneSaving = {[weak self] in
-                self?.tvTrip.reloadData()
+                guard let self = self else { return }
+                self.tvTrip.reloadData()
             }
             tripIndexToEdit = nil
         }

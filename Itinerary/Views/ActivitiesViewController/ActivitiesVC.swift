@@ -17,7 +17,7 @@ class ActivitiesVC: UIViewController {
     var tripTitle: String?
     var tripModel: TripModel?
     var sectionHeaderHeight: CGFloat = 54
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = tripTitle
@@ -25,18 +25,23 @@ class ActivitiesVC: UIViewController {
         self.tvActivities.dataSource = self
         self.tvActivities.delegate = self
         
+        updateTvTrips()
+        
+        sectionHeaderHeight = tvActivities.dequeueReusableCell(withIdentifier: HeaderTVCell.identifier)!.contentView.bounds.height
+    }
+    
+    fileprivate func updateTvTrips() {
         Tripfunctions.readTrip(by: tripId) { [weak self] (tripModel) in
             guard let self = self else {return}
             self.tripModel = tripModel
             
             guard let model = tripModel else {return}
-//            self.title = model.title
+            //            self.title = model.title
             self.ivBackground.image = model.image
             self.tvActivities.reloadData()
         }
-        
-        sectionHeaderHeight = tvActivities.dequeueReusableCell(withIdentifier: HeaderTVCell.identifier)!.contentView.bounds.height
     }
+    
     
     @IBAction func btnAddPressed(_ sender: Any) {
         let alert = UIAlertController(title: "Wich would you like to add?", message: nil, preferredStyle: .actionSheet)
@@ -61,7 +66,18 @@ class ActivitiesVC: UIViewController {
     func handleAddDay(action: UIAlertAction){
 //        let storyboard = UIStoryboard(name: String(describing: AddDayVC.self), bundle: nil)
 //        let vc = storyboard.instantiateInitialViewController()!
-        let vc = AddDayVC.getInstance()
+        let vc = AddDayVC.getInstance() as! AddDayVC
+        vc.tripIndex = Data.tripModels.firstIndex(where: { (tripModel) -> Bool in
+            tripModel.id == self.tripId
+        })
+        vc.doneSaving = { [weak self] (dayModel) in
+            guard let self = self else {return}
+//            self.updateTvTrips()
+            let indexArray = [self.tripModel?.dayModels.count ?? 0]
+            self.tripModel?.dayModels.append(dayModel)
+            
+            self.tvActivities.insertSections(IndexSet(indexArray), with: .automatic)
+        }
         self.present(vc, animated: true)
     }
 
