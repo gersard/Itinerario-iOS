@@ -52,14 +52,17 @@ class ActivitiesVC: UIViewController {
         
         alert.popoverPresentationController?.sourceView = sender as? UIView
 //        alert.popoverPresentationController?.sourceRect = ((sender as? UIView)?.bounds)!
-        alert.popoverPresentationController?.sourceRect = CGRect(x: 0, y: -4, width: btnAdd.bounds.width, height: 0)
+        alert.popoverPresentationController?.sourceRect = CGRect(x: 0, y: -4, width: btnAdd.bounds.width, height: btnAdd.bounds.height)
 //        alert.view.tintColor = Theme.tint
         
         present(alert, animated: true, completion: nil)
     }
     
     func handleAddDay(action: UIAlertAction){
-        
+//        let storyboard = UIStoryboard(name: String(describing: AddDayVC.self), bundle: nil)
+//        let vc = storyboard.instantiateInitialViewController()!
+        let vc = AddDayVC.getInstance()
+        self.present(vc, animated: true)
     }
 
 }

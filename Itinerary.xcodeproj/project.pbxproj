@@ -34,6 +34,9 @@
 		CEEC7DB42272A52F0011F0C1 /* HeaderTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC7DB32272A52F0011F0C1 /* HeaderTVCell.swift */; };
 		CEEC7DB62272AC2A0011F0C1 /* RowActivityTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC7DB52272AC2A0011F0C1 /* RowActivityTVCell.swift */; };
 		CEEC7DB82272B63F0011F0C1 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC7DB72272B63F0011F0C1 /* UITableViewCellExtension.swift */; };
+		CEEC7DBB227D3D280011F0C1 /* AddDayVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEEC7DBA227D3D280011F0C1 /* AddDayVC.storyboard */; };
+		CEEC7DBD227D3D490011F0C1 /* AddDayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC7DBC227D3D490011F0C1 /* AddDayVC.swift */; };
+		CEEC7DBF227D42EB0011F0C1 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC7DBE227D42EB0011F0C1 /* UIViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +69,9 @@
 		CEEC7DB32272A52F0011F0C1 /* HeaderTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTVCell.swift; sourceTree = "<group>"; };
 		CEEC7DB52272AC2A0011F0C1 /* RowActivityTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowActivityTVCell.swift; sourceTree = "<group>"; };
 		CEEC7DB72272B63F0011F0C1 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
+		CEEC7DBA227D3D280011F0C1 /* AddDayVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDayVC.storyboard; sourceTree = "<group>"; };
+		CEEC7DBC227D3D490011F0C1 /* AddDayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDayVC.swift; sourceTree = "<group>"; };
+		CEEC7DBE227D42EB0011F0C1 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +139,7 @@
 		CED61C5022125C7700415F56 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CEEC7DB9227D3CEE0011F0C1 /* AddDayViewController */,
 				CED61C782221BB4F00415F56 /* ActivitiesViewController */,
 				CED61C662218FF3D00415F56 /* AddTripViewController */,
 				CED61C5122125C8600415F56 /* TripsViewController */,
@@ -156,6 +163,7 @@
 				CED61C5922164F4B00415F56 /* UiViewExtension.swift */,
 				CED61C6222165C5700415F56 /* UIButtonExtension.swift */,
 				CEEC7DB72272B63F0011F0C1 /* UITableViewCellExtension.swift */,
+				CEEC7DBE227D42EB0011F0C1 /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -216,6 +224,15 @@
 				CEEC7DB52272AC2A0011F0C1 /* RowActivityTVCell.swift */,
 			);
 			path = ActivitiesViewController;
+			sourceTree = "<group>";
+		};
+		CEEC7DB9227D3CEE0011F0C1 /* AddDayViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CEEC7DBA227D3D280011F0C1 /* AddDayVC.storyboard */,
+				CEEC7DBC227D3D490011F0C1 /* AddDayVC.swift */,
+			);
+			path = AddDayViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +297,7 @@
 			files = (
 				CED61C652218FF3200415F56 /* AddTripVC.storyboard in Resources */,
 				CED61C612216535500415F56 /* Colors.xcassets in Resources */,
+				CEEC7DBB227D3D280011F0C1 /* AddDayVC.storyboard in Resources */,
 				CED61C5522125CE400415F56 /* TripsVC.storyboard in Resources */,
 				CEAAAD8320634B4700AD6A44 /* LaunchScreen.storyboard in Resources */,
 				CED61C5F2216520000415F56 /* FugazOne-Regular.ttf in Resources */,
@@ -304,6 +322,7 @@
 				CED61C4B2212555500415F56 /* TripModel.swift in Sources */,
 				CEEC7DB82272B63F0011F0C1 /* UITableViewCellExtension.swift in Sources */,
 				CED61C6B2219031200415F56 /* PopupUiView.swift in Sources */,
+				CEEC7DBD227D3D490011F0C1 /* AddDayVC.swift in Sources */,
 				CED61C682218FF7D00415F56 /* AddTripVC.swift in Sources */,
 				CED61C6322165C5700415F56 /* UIButtonExtension.swift in Sources */,
 				CEEC7DB62272AC2A0011F0C1 /* RowActivityTVCell.swift in Sources */,
@@ -314,6 +333,7 @@
 				CEEC7DB42272A52F0011F0C1 /* HeaderTVCell.swift in Sources */,
 				CED61C772221B91B00415F56 /* MockData.swift in Sources */,
 				CED61C732221B7C800415F56 /* ActivityModel.swift in Sources */,
+				CEEC7DBF227D42EB0011F0C1 /* UIViewControllerExtension.swift in Sources */,
 				CED61C4F2212577B00415F56 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
