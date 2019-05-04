@@ -48,25 +48,7 @@ class AddTripVC: UIViewController {
     }
     
     @IBAction func save(_ sender: Any) {
-        tfTrip.rightViewMode = .never
-        
-        guard tfTrip.text != "", let newTripName = tfTrip.text else {
-            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-            imageView.image = UIImage(named: "ic_alert_red")
-            imageView.contentMode = .scaleAspectFit
-
-            tfTrip.rightView = imageView
-            
-            // Alternatives
-//            tfTrip.backgroundColor = UIColor.red
-//            tfTrip.layer.borderColor = UIColor.red.cgColor
-//            tfTrip.layer.borderWidth = 1
-//            tfTrip.layer.cornerRadius = 5
-            
-            tfTrip.rightViewMode = .always
-        
-            return
-        }
+        guard tfTrip.hasValue, let newTripName = tfTrip.text else { return }
 
         if let index = tripIndexToEdit {
             Tripfunctions.updateTrip(at: index, title: tfTrip.text!, image: ivBackground.image)
