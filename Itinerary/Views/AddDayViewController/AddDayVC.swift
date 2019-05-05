@@ -12,7 +12,7 @@ class AddDayVC: UIViewController {
 
     @IBOutlet weak var viewPopup: UIView!
     @IBOutlet weak var lblTitle: UILabel!
-    @IBOutlet weak var tfTitle: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var tfSubTitle: UITextField!
     @IBOutlet weak var btnCancel: UIButton!
     @IBOutlet weak var btnSave: UIButton!
@@ -32,11 +32,11 @@ class AddDayVC: UIViewController {
     }
     
     @IBAction func save(_ sender: Any) {
-        tfTitle.rightViewMode = .never
+//        tfTitle.rightViewMode = .never
         
-        guard tfTitle.hasValue, let newTitle = tfTitle.text else { return }
+//        guard tfTitle.hasValue, let newTitle = tfTitle.text else { return }
 
-        let dayModel = DayModel(title: newTitle, subtitle: tfSubTitle.text ?? "", data: nil)
+        let dayModel = DayModel(title: datePicker.date, subtitle: tfSubTitle.text ?? "", data: nil)
         DayFunctions.createDay(at: tripIndex!, dayModel: dayModel)
         
         if let doneSaving = doneSaving {
@@ -44,5 +44,10 @@ class AddDayVC: UIViewController {
         }
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func donePressed(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
 
 }
