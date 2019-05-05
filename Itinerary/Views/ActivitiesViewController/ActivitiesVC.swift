@@ -73,8 +73,10 @@ class ActivitiesVC: UIViewController {
         vc.doneSaving = { [weak self] (dayModel) in
             guard let self = self else {return}
 //            self.updateTvTrips()
-            let indexArray = [self.tripModel?.dayModels.count ?? 0]
+//            let indexArray = [self.tripModel?.dayModels.count ?? 0]
             self.tripModel?.dayModels.append(dayModel)
+            
+            let indexArray = [self.tripModel?.dayModels.firstIndex(of: dayModel) ?? 0]
             
             self.tvActivities.insertSections(IndexSet(indexArray), with: .automatic)
         }
