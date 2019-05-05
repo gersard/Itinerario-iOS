@@ -67,6 +67,7 @@ class ActivitiesVC: UIViewController {
 //        let storyboard = UIStoryboard(name: String(describing: AddDayVC.self), bundle: nil)
 //        let vc = storyboard.instantiateInitialViewController()!
         let vc = AddDayVC.getInstance() as! AddDayVC
+        vc.tripModel = self.tripModel
         vc.tripIndex = Data.tripModels.firstIndex(where: { (tripModel) -> Bool in
             tripModel.id == self.tripId
         })

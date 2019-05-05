@@ -20,9 +20,7 @@ class HeaderTVCell: UITableViewCell {
     }
     
     func setup(day: DayModel){
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        lblTitle.text = formatter.string(from: day.title)
+        lblTitle.text = day.title.mediumDateStyle
         lblSubtitle.text = day.subtitle
     }
 

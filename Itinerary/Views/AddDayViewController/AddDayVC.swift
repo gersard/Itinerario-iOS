@@ -19,6 +19,7 @@ class AddDayVC: UIViewController {
     
     var doneSaving: ((DayModel) -> Void)?
     var tripIndex: Int?
+    var tripModel: TripModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,10 +33,18 @@ class AddDayVC: UIViewController {
     }
     
     @IBAction func save(_ sender: Any) {
+        if alreadyExists(datePicker.date) {
+            let ac = UIAlertController(title: "Day already exists", message: "Choose another date", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+            ac.addAction(okAction)
+            self.present(ac, animated: true, completion: nil)
+            return
+        }
 //        tfTitle.rightViewMode = .never
         
 //        guard tfTitle.hasValue, let newTitle = tfTitle.text else { return }
 
+        
         let dayModel = DayModel(title: datePicker.date, subtitle: tfSubTitle.text ?? "", data: nil)
         DayFunctions.createDay(at: tripIndex!, dayModel: dayModel)
         
@@ -49,5 +58,8 @@ class AddDayVC: UIViewController {
         sender.resignFirstResponder()
     }
     
+    func alreadyExists(_ datE: Date) -> Bool {
+        return tripModel.dayModels.contains(where: { $0.title.mediumDateStyle == datE.mediumDateStyle })
+    }
 
 }

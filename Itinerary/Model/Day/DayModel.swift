@@ -21,6 +21,7 @@ struct DayModel {
             self.activityModels = data
         }
     }
+    
 }
 
 //extension DayModel: Equatable{
